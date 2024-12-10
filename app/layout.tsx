@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { Navbar } from "@/components/home/navbar";
+import { Toaster } from "@/components/ui/toaster"
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="absolute z-10 w-full">
+        <Toaster />
           <Navbar/>
         </div>
         {children}
