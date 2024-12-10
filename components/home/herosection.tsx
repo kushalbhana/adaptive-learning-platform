@@ -1,35 +1,4 @@
-"use client"
-import { useState, useEffect } from "react";
-
 export default function HeroSection() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
-  useEffect(() => {
-    const targetDate = new Date("2024-12-01T10:00:00"); // Replace with your event date
-    const timer = setInterval(() => {
-      const now = new Date();
-      // @ts-ignore
-      const difference = targetDate - now; // Difference in milliseconds
-
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / (1000 * 60)) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        });
-      } else {
-        clearInterval(timer);
-      }
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <div className="bg-slate-900">
