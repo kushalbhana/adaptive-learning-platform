@@ -8,9 +8,14 @@ export function CourseSection(){
                     <h1 className="text-6xl mt-4">Courses</h1>
                 </div>
                 <div className="mt-10 flex justify-center items-center gap-4 flex-wrap">
-                    <CourseCard/>
-                    <CourseCard/>
-                    <CourseCard/>
+                    <CourseCard 
+                    courseName="Computer Networks" 
+                    courseDescription="Learn the fundamentals of computer networks, including protocols, topologies, and data communication. Master concepts like IP addressing, routing, and network security to build a strong foundation for IT and cybersecurity roles."/>
+                    <CourseCard
+                        courseName="Computer Networks" 
+                        courseDescription="Learn the fundamentals of computer networks, including protocols, topologies, and data communication. Master concepts like IP addressing, routing, and network security to build a strong foundation for IT and cybersecurity roles."/>
+                    <CourseCard courseName="Computer Networks" 
+                    courseDescription="Learn the fundamentals of computer networks, including protocols, topologies, and data communication. Master concepts like IP addressing, routing, and network security to build a strong foundation for IT and cybersecurity roles."/>
                 </div>
             </div>
         </div>

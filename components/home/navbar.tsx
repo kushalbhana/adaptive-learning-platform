@@ -1,5 +1,6 @@
 import { AuthDialogbox } from "./authDialogBox"
 import Image from "next/image"
+import { getServerSession } from "next-auth"
 
 export function Navbar(){
     return(
@@ -20,6 +21,11 @@ export function Navbar(){
                         <div>
                             <h1 className="text-slate-200 text-xl">
                                 Courses
+                            </h1>
+                        </div>
+                        <div>
+                            <h1 className="text-slate-200 text-xl">
+                                My Courses
                             </h1>
                         </div>
                     </div>
