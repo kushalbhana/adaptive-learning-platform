@@ -4,6 +4,8 @@ import "./globals.css";
 
 import { Navbar } from "@/components/home/navbar";
 import { Toaster } from "@/components/ui/toaster"
+import { Providers } from "./providers";
+
 
 
 const geistSans = localFont({
@@ -32,11 +34,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Providers>
         <div className="absolute z-10 w-full">
         <Toaster />
           <Navbar/>
         </div>
-        {children}
+        <div>
+          {children}
+
+        </div>
+        </Providers>
       </body>
     </html>
   );

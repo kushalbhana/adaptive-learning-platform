@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button"
+import { AuthDialogbox } from "./authDialogBox"
+import Image from "next/image"
 
 export function Navbar(){
     return(
@@ -6,7 +7,7 @@ export function Navbar(){
             <div className="w-full flex justify-between items-center h-20 bg-gray-950">
                 <div className="pl-10">
                     <h1 className="text-slate-400 text-xl font-bold">
-                        AchieversZone
+                        <img src="https://utfs.io/f/ZZtfGUCrA4hKhflzFys81fVdGUtFOkQwnNbrC4pgRKe59qsh" alt="AchieversZone" width="300px" />
                     </h1>
                 </div>
                 <div className="flex justify-center items-center pr-10 gap-2">
@@ -23,10 +24,7 @@ export function Navbar(){
                         </div>
                     </div>
                     <div>
-                        <Button className="bg-violet-600">Signin </Button>
-                    </div>
-                    <div>
-                        <Button className="bg-violet-600">Signup </Button>
+                        <AuthDialogbox/>
                     </div>
                 </div>
             </div>
