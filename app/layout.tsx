@@ -3,16 +3,16 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { Navbar } from "@/components/home/navbar";
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/toaster";
 import { Providers } from "./providers";
-
-
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -34,16 +34,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>
-        <div className="absolute z-10 w-full">
-        <Toaster />
-          <Navbar/>
-        </div>
-        <div>
-          {children}
-
-        </div>
-        </Providers>
+        <ThemeProvider>
+          <Providers>
+            <div className="absolute z-10 w-full">
+              <Toaster />
+              <Navbar />
+            </div>
+            <div className="min-h-screen bg-white dark:bg-gray-900 dark:text-white">
+              {children}
+            </div>
+          </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );

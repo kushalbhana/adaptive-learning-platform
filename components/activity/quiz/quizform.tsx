@@ -85,7 +85,8 @@ export function QuizForm() {
             name={`questions.${index}.answer`} // Correct name syntax
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{question.text}</FormLabel>
+                <FormLabel><p className="font-bold">{question.text}*</p></FormLabel>
+                  <div className="2">
                 <FormControl>
                   <RadioGroup
                     onValueChange={field.onChange}
@@ -97,12 +98,13 @@ export function QuizForm() {
                         <RadioGroupItem 
                           value={option} 
                           id={`q${index}-option${optionIndex}`} 
-                        />
+                          />
                         <FormLabel htmlFor={`q${index}-option${optionIndex}`}>{option}</FormLabel>
                       </div>
                     ))}
                   </RadioGroup>
                 </FormControl>
+                    </div>
                 <FormMessage />
               </FormItem>
             )}

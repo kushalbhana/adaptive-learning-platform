@@ -24,7 +24,7 @@ export function CourseCard({courseName, courseDescription}: any) {
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
           <Image
-            src="https://utfs.io/f/ZZtfGUCrA4hKsGLZOw1bQbrk6BZWowPqHph84fNgCJ5s9tRA"
+            src="https://utfs.io/f/ZZtfGUCrA4hKqtpKjjRbdEV9e7qKUBJk3PDxfO2FCnGYTRrW"
             height="1000"
             width="1000"
             className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -39,14 +39,16 @@ export function CourseCard({courseName, courseDescription}: any) {
             target="__blank"
             className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
           >
-            Try now →
+            View Details →
           </CardItem>
           <CardItem
             translateZ={20}
             as="button"
             className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
           >
-            Join
+            <Link href="/course/id/12">
+              Join
+            </Link>
           </CardItem>
         </div>
       </CardBody>

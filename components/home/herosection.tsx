@@ -21,7 +21,7 @@ export default function HeroSection() {
           🚀 Learn Smarter, Not Harder 
         </h1>
         <p className="text-lg mb-6 text-gray-200 font-bold max-w-2xl">
-          December 1, 2024 – December 16, 2024
+         
         </p>
         <p className="text-lg mb-6 text-gray-300 max-w-2xl">
           Test your rapid prototyping and design thinking skills! Push the
@@ -34,13 +34,13 @@ export default function HeroSection() {
             }
             className="bg-transparent border border-indigo-500 hover:bg-indigo-500 text-indigo-500 hover:text-white px-6 py-3 rounded-lg shadow-lg font-bold transition-all"
           >
-            Register Now
+            Our Courses
           </button>
           <button
             onClick={() => alert("Event Details Coming Soon!")}
             className="bg-indigo-700 px-6 py-3 rounded-lg shadow-lg font-bold hover:bg-indigo-800 transition-all"
           >
-            Event Details
+            About Us
           </button>
         </div>
         <div className="mt-10 mb-10">
