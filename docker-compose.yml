@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: adaptive_learning_database
+    ports:
+      - "5431:5432"
+    environment:
+      - POSTGRES_USER=kushal
+      - POSTGRES_PASSWORD=kushal_password_chessmasters
+      - POSTGRES_DB=adaptive_learning_platform
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

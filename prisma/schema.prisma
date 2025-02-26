@@ -24,3 +24,19 @@ model User {
   password          String?
   createdAt         DateTime @default(now())
 }
+
+model Course {
+  id          String    @unique @id @default(cuid())
+  courseName  String    @unique
+  createdAt   DateTime  @default(now())
+  coursePage  CoursePage[]
+}
+
+model CoursePage {
+  id          String    @unique @id @default(cuid())
+  pageNumber  Int       @unique
+  data        String
+  courseId    String
+
+  course      Course    @relation(fields: [courseId], references: [id])      
+}
