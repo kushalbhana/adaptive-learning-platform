@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Adaptive Learning Platform
 
-## Getting Started
+## Overview
 
-First, run the development server:
+The Adaptive Learning Platform is an AI-powered educational system that tailors learning content based on user performance. This platform dynamically adjusts difficulty levels, recommends personalized resources, and provides real-time analytics to enhance the learning experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- AI-driven content recommendations
+- User performance tracking
+- Dynamic difficulty adjustment
+- Real-time analytics and insights
+- Scalable and modular architecture
+
+## Tech Stack
+
+- **Frontend:** Next.js, Tailwind CSS
+- **Backend:** Next JS, Prisma ORM, Google Gemini
+- **Database:** PostgreSQL
+- **Containerization:** Docker, Docker Compose
+- **State Management:** Recoil
+- **Authentication:** NextAuth.js (JWT-based authentication)
+
+## Setup Instructions
+
+Follow these steps to set up the project locally:
+
+### 1. Fork and Clone the Repository
+
+```sh
+# Fork the repository on GitHub
+# Clone the forked repository
+git clone https://github.com/YOUR_GITHUB_USERNAME/adaptive-learning-platform.git
+cd adaptive-learning-platform
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Fill Up the `.env` File
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create a `.env` file in the root directory and provide the required environment variables. A sample `.env.example` is available for reference.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Install Docker Desktop and Run Docker Compose
 
-## Learn More
+Ensure Docker Desktop is installed and running, then execute:
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+docker compose up
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This will set up the database and other necessary services.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Install Dependencies
 
-## Deploy on Vercel
+```sh
+npm install
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 5. Run Prisma Migrations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sh
+npx prisma migrate dev
+```
+
+This applies the latest database migrations.
+
+### 6. Start the Development Server
+
+```sh
+npm run dev
+```
+
+The application will be available at `http://localhost:3000/`.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new feature branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
+
